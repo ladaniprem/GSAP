@@ -59,8 +59,6 @@ const GsapScrollTrigger = () => {
                 <div className="box w-20 h-20 bg-red-500 rounded-lg shadow-lg"/>
                 <div className="box w-20 h-20 bg-blue-500 rounded-lg shadow-lg"/>
                 <div className="box w-20 h-20 bg-green-500 rounded-lg shadow-lg"/>
-                <div className="box w-20 h-20 bg-yellow-500 rounded-lg shadow-lg"/>
-                <div className="box w-20 h-20 bg-purple-500 rounded-lg shadow-lg"/>
             </div>
         </main>
     );

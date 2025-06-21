@@ -1,24 +1,33 @@
-import './App.css'
-import GsapFrom from './pages/GsapFrom'
-import GsapFromTo from './pages/GsapFromTo'
-import GsapScrollTrigger from './pages/GsapScrollTrigger'
-import GsapStagger from './pages/GsapStagger'
-import GsapTimeline from './pages/GsapTimeline'
-import GsapTo from './pages/GsapTo'
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-function App() {
-  
+import {
+  GsapFrom,
+  GsapFromTo,
+  GsapScrollTrigger,
+  GsapStagger,
+  GsapText,
+  GsapTimeline,
+  GsapTo,
+  Home,
+} from "./pages";
 
+const App = () => {
   return (
-    <>
-    <GsapTo/>
-     <GsapFrom />
-     <GsapFromTo />
-     <GsapTimeline />
-     <GsapStagger />
-     <GsapScrollTrigger />
-    </>
-  )
-}
+    <div className="bg-black min-h-screen w-full">
+      <Router>
+        <Routes>
+          <Route path="/gsapto" element={<GsapTo />} />
+          <Route path="/gsapfrom" element={<GsapFrom />} />
+          <Route path="/gsapfromto" element={<GsapFromTo />} />
+          <Route path="/gsaptimeline" element={<GsapTimeline />} />
+          <Route path="/gsapstagger" element={<GsapStagger />} />
+          <Route path="/gsapscrolltrigger" element={<GsapScrollTrigger />} />
+          <Route path="/gsaptext" element={<GsapText />} />
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </Router>
+    </div>
+  );
+};
 
-export default App
+export default App;
